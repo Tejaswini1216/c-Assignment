@@ -1,0 +1,147 @@
+1
+using System;
+
+public abstract class Employee
+{
+    public string Name { get; set; }
+    public int Age { get; set; }
+    public string Id { get; set; }
+
+    public abstract double CalculateSalary();
+}
+
+public class Driver : Employee
+{
+    public override double CalculateSalary()
+    {
+        return 3000;
+    }
+}
+
+public class Developer : Employee
+{
+    public override double CalculateSalary()
+    {
+        return 5000;
+    }
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Driver driver1 = new Driver();
+        driver1.Name = "John Smith";
+        driver1.Age = 30;
+        driver1.Id = "D001";
+
+        Developer developer1 = new Developer();
+        developer1.Name = "Jane Doe";
+        developer1.Age = 25;
+        developer1.Id = "DEV001";
+
+        Console.WriteLine("Driver 1's Salary: " + driver1.CalculateSalary());     // Output: 3000
+        Console.WriteLine("Developer 1's Salary: " + developer1.CalculateSalary()); // Output: 5000
+    }
+}
+
+2
+using System;
+
+interface IShape
+{
+    double CalculateArea();
+    double CalculatePerimeter();
+}
+
+class Rectangle : IShape
+{
+    public double Length { get; set; }
+    public double Width { get; set; }
+
+    public Rectangle(double length, double width)
+    {
+        Length = length;
+        Width = width;
+    }
+
+    public double CalculateArea()
+    {
+        return Length * Width;
+    }
+
+    public double CalculatePerimeter()
+    {
+        return 2 * (Length + Width);
+    }
+}
+
+class Square : IShape
+{
+    public double Side { get; set; }
+
+    public Square(double side)
+    {
+        Side = side;
+    }
+
+    public double CalculateArea()
+    {
+        return Side * Side;
+    }
+
+    public double CalculatePerimeter()
+    {
+        return 4 * Side;
+    }
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Rectangle rectangle = new Rectangle(7, 4);
+        Console.WriteLine("Rectangle: ");
+        Console.WriteLine("Area: " + rectangle.CalculateArea() + " Perimeter: " + rectangle.CalculatePerimeter());
+
+        Square square = new Square(4);
+        Console.WriteLine("Square: ");
+        Console.WriteLine("Area: " + square.CalculateArea() + " Perimeter: " + square.CalculatePerimeter());
+    }
+}
+
+3
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        for (int i = 1; i <= 5; i++)
+        {
+            for (int j = 1; j <= i; j++)
+            {
+                Console.Write(j + " ");
+            }
+            Console.WriteLine();
+        }
+    }
+}
+
+4
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        for (int i = 1; i <= 5; i++)
+        {
+            for (int j = 1; j <= i; j++)
+            {
+                Console.Write(i + " ");
+            }
+            Console.WriteLine();
+        }
+    }
+}

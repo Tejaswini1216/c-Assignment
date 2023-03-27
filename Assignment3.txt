@@ -1,0 +1,74 @@
+1
+using System;
+
+namespace Conditional
+{
+    class IfStatement
+    {
+        public static void Main(string[] args)
+        {
+            int age=30;
+            if (age <45)
+            {
+                if(age<=26)
+                {
+                    Console.WriteLine("He is not eligible for getting job");
+                }
+                else
+                {
+                    Console.WriteLine("He is eligible for getting job");
+                }
+            }
+                
+        }
+    }
+}
+
+2
+using System;
+
+namespace Conditional
+{
+    class Program
+    {
+        public static void Main(string[] args)
+        {
+            int value = 20;
+            if (value < 10)
+            {
+                Console.WriteLine("Value is less than 10");
+            }
+            else
+            {
+                Console.WriteLine("Value is greater than 10");
+            }
+            Console.ReadKey();
+        }
+    }
+}
+
+3
+using System;
+
+namespace DemoApplication
+{
+    class Programsss
+    {
+        public static void Main(string[] args)
+        {
+            int value = 1;
+            switch (value)
+            {
+                case 1:
+                    Console.WriteLine("Value is 1");
+                    break;
+                case 2:
+                    Console.WriteLine("Value is 2");
+                    break;
+                default:
+                    Console.WriteLine("Value is different");
+                    break;
+            }
+        }
+    }
+}
